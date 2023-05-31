@@ -25,6 +25,11 @@ The fundamental algorithm is [Hindsight Experience Replay](https://arxiv.org/abs
 
 ## Main Module
 
+### Arguements
+All parameters of different algorithms are in [arguements.py](./arguments.py), please check the parameters before running algorithms.
+
+Then you can run [train.py](./train.py) for training. 
+
 ### Goal Teacher - Exploration Goal Selection
 Many algorithms set intrinsic goals to help robot to exploration in hard-exploraion environments. This module contains the goal selection algorithms.
 - Supported Algorithms
@@ -87,9 +92,9 @@ Different transition selection algorithms,including
 
 ✅ [CHER](https://dl.acm.org/doi/10.5555/3454287.3455418)
 ✅ [MEP](https://arxiv.org/abs/1905.08786v1)
-✅[EB-HER](https://arxiv.org/abs/1810.01363)
-✅[PER](https://arxiv.org/abs/1511.05952)
-✅[LABER](https://arxiv.org/abs/2110.01528)
+✅ [EB-HER](https://arxiv.org/abs/1810.01363)
+✅ [PER](https://arxiv.org/abs/1511.05952)
+✅ [LABER](https://arxiv.org/abs/2110.01528)
 
 Running command
 ```python 
@@ -124,9 +129,16 @@ There are six most difficult envs where  the desired goals and block initial pos
 ![hard_envs](./fetchenv_hard.png)
 
 
-## How to use
+## Some ToDos
 
-All parameters are in [arguements.py](./arguments.py), please check the parameters when running algorithms.
+- Model-based Planning
+    - [MHER](https://arxiv.org/abs/2107.00306)
+    - [PEG](https://openreview.net/forum?id=6qeBuZSo7Pr)
+    - [MapGo](https://arxiv.org/abs/2105.06350)
+    
+- Other curiosity and curriculum learning methods
+
+
 
 
 
