@@ -26,12 +26,18 @@ The fundamental algorithm is [Hindsight Experience Replay](https://arxiv.org/abs
 ### Goal Teacher - Exploration Goal Selection
 Many algorithms set intrinsic goals to help robot to exploration in hard-exploraion environments. This module contains the goal selection algorithms.
 - Supported Algorithms
-    - [HGG](https://arxiv.org/abs/1906.04279)  (rl_modules/teachers/HGG) 
-    - [VDS](https://arxiv.org/abs/2006.09641) (rl_modules/teachers/VDS)
-    - [MEGA](https://arxiv.org/abs/2007.02832)(rl_modules/teahcers/AGE)
-    - [RIG](https://arxiv.org/abs/1807.04742) (rl_modules/teachers/AGE)
-    - [MinQ](https://arxiv.org/abs/1907.08225) (rl_modules/teachers/AGE)
-    - [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
+
+    ✅ [HGG](https://arxiv.org/abs/1906.04279)  (rl_modules/teachers/HGG) 
+
+    ✅ [VDS](https://arxiv.org/abs/2006.09641) (rl_modules/teachers/VDS)
+
+    ✅ [MEGA](https://arxiv.org/abs/2007.02832)(rl_modules/teahcers/AGE)
+
+    ✅ [RIG](https://arxiv.org/abs/1807.04742) (rl_modules/teachers/AGE)
+
+    ✅ [MinQ](https://arxiv.org/abs/1907.08225) (rl_modules/teachers/AGE)
+
+    ✅ [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
 
 The AGE(Active Goal Exploration) module contains different goal sampling stratagies, please see [ageteacher.py](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/rl_modules/teachers/AGE/ageteacher.py) for detailed information.
 
@@ -58,10 +64,15 @@ mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG -
 ### Reward Teacher - Intrinsic Reward 
 Use intrinsic reward to score goals or help robot learning.
  - Supported Algorithms
-    - [MINE](https://arxiv.org/abs/2103.08107)  (rl_modules/teachers/MINE) 
-    - [RND](https://arxiv.org/abs/1810.12894) (rl_modules/teachers/RND)
-    - [ICM](https://arxiv.org/abs/1705.05363)(rl_modules/teahcers/ICM)
-    - [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
+
+    ✅ [MINE](https://arxiv.org/abs/2103.08107)  (rl_modules/teachers/MINE)
+
+    ✅ [RND](https://arxiv.org/abs/1810.12894) (rl_modules/teachers/RND)
+
+    ✅ [ICM](https://arxiv.org/abs/1705.05363)(rl_modules/teahcers/ICM)
+
+    ✅ [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
+    
 Some examples of running commands:
 ```python
 # MINE/AIM/ICM
@@ -71,11 +82,12 @@ mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG -
 
 ### Transition Selection
 Different transition selection algorithms,including
-- [CHER](https://dl.acm.org/doi/10.5555/3454287.3455418)
-- [MEP](https://arxiv.org/abs/1905.08786v1)
-- [EB-HER](https://arxiv.org/abs/1810.01363)
-- [PER](https://arxiv.org/abs/1511.05952)
-- [LABER](https://arxiv.org/abs/2110.01528)
+
+✅ [CHER](https://dl.acm.org/doi/10.5555/3454287.3455418)
+✅ [MEP](https://arxiv.org/abs/1905.08786v1)
+✅[EB-HER](https://arxiv.org/abs/1810.01363)
+✅[PER](https://arxiv.org/abs/1511.05952)
+✅[LABER](https://arxiv.org/abs/2110.01528)
 
 Running command
 ```python 
