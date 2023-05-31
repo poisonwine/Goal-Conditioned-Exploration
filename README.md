@@ -27,7 +27,24 @@ Many algorithms set intrinsic goals to help robot to exploration in hard-explora
     - [MinQ](https://arxiv.org/abs/1907.08225) (rl_modules/teachers/AGE)
     - [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
 
-The AGE(Active Goal Exploration) module contains different goal sampling stratagies, please see [ageteacher.py]() for detailed information.
+The AGE(Active Goal Exploration) module contains different goal sampling stratagies, please see [ageteacher.py](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/rl_modules/teachers/AGE/ageteacher.py) for detailed information.
 
 ### Reward Teacher
-Use intrinsic reward to guide 
+Use intrinsic reward to score goals or help robot learning.
+ - Supported Algorithms
+    - [MINE](https://arxiv.org/abs/2103.08107)  (rl_modules/teachers/MINE) 
+    - [RND](https://arxiv.org/abs/1810.12894) (rl_modules/teachers/RND)
+    - [ICM](https://arxiv.org/abs/1705.05363)(rl_modules/teahcers/ICM)
+
+
+### Algorithm
+We implement three common reinforment learning  algorithms in robot learning, including DDPG、 TD3 and SAC. Besides, we implement three types of critic network architecture, including [monolithic](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/rl_modules/models.py)、[BVN](https://arxiv.org/abs/2204.13695) and [MRN](https://arxiv.org/abs/2208.08133).
+
+### Envs
+Our repo contains plenty of  goal-conditioned robot envs, please see [myenvs](https://github.com/poisonwine/Goal-Conditioned-Exploration/tree/master/myenvs). 
+The most difficult envs are 
+![hard_envs](https://img.shields.io/badge/license-MIT-blue)
+   
+- [FetchPushObstacle](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/myenvs/fetch/push_new.py)
+- [FetchPushMiddleGap](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/myenvs/fetch/push_wall_obstacle.py)
+- [FetchPushDoubleObstacle]
