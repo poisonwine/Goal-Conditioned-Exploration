@@ -59,7 +59,7 @@ class GoalAugmentor(object):
 if __name__ == '__main__':
 
     batchsize=256
-    goal_sampler = Goal_Curriculum('FetchSlide-v1', 0.03, batch_size=256)
+    goal_sampler = GoalAugmentor('FetchSlide-v1', 0.03, batch_size=256)
     x = (-1 + 2*np.random.random(size=128)) * 0.05
     y = (-1 + 2*np.random.random(size=128)) * 0.05
 

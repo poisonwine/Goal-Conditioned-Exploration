@@ -45,5 +45,15 @@ Our repo contains plenty of  goal-conditioned robot envs, please see [myenvs](ht
 
 There are six most difficult envs where  the desired goals and block initial position have a huge gap, as the following figure shows.
 ![hard_envs](./fetchenv_hard.png)
-   
 
+
+### Other Supported Algorithms
+Transition selecting
+- [CHER](https://dl.acm.org/doi/10.5555/3454287.3455418)
+- [MEP](https://arxiv.org/abs/1905.08786v1)
+- [EB-HER]
+
+
+## How to use
+
+All parameters is 
