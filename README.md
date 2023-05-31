@@ -41,11 +41,9 @@ Use intrinsic reward to score goals or help robot learning.
 We implement three common reinforment learning  algorithms in robot learning, including DDPG、 TD3 and SAC. Besides, we implement three types of critic network architecture, including [monolithic](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/rl_modules/models.py)、[BVN](https://arxiv.org/abs/2204.13695) and [MRN](https://arxiv.org/abs/2208.08133).
 
 ### Envs
-Our repo contains plenty of  goal-conditioned robot envs, please see [myenvs](https://github.com/poisonwine/Goal-Conditioned-Exploration/tree/master/myenvs). 
+Our repo contains plenty of  goal-conditioned robot envs, please see [myenvs](https://github.com/poisonwine/Goal-Conditioned-Exploration/tree/master/myenvs/__init__.py). 
 
 There are six most difficult envs where  the desired goals and block initial position have a huge gap, as the following figure shows.
 ![hard_envs](./fetchenv_hard.png)
    
-- [FetchPushObstacle](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/myenvs/fetch/push_new.py)
-- [FetchPushMiddleGap](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/myenvs/fetch/push_wall_obstacle.py)
-- [FetchPushDoubleObstacle]
+
