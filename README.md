@@ -4,7 +4,9 @@ This repo is established for goal-conditioned exploration in multi-goal robotic 
 
 The fundamental algorithm is [Hindsight Experience Replay](https://arxiv.org/abs/1707.01495) (HER) , and we have extended the HER algorithm from the following aspects:
 - Exploration Goal Selection: how to set exploration goal at the beginning of an episode
+
 - Transition Selection: how to select more valueable transitions to replay
+
 - Intrinsic Reward: use priors to accelerate learning
 
 
@@ -14,7 +16,7 @@ The fundamental algorithm is [Hindsight Experience Replay](https://arxiv.org/abs
 
 - mpi4py==3.1.3
 
-- torch==1.8.1+cu111
+- torch==1.8.1
 
 - mujoco-py==2.1.2.14
 
@@ -72,7 +74,7 @@ Use intrinsic reward to score goals or help robot learning.
     ✅ [ICM](https://arxiv.org/abs/1705.05363)(rl_modules/teahcers/ICM)
 
     ✅ [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
-    
+
 Some examples of running commands:
 ```python
 # MINE/AIM/ICM
@@ -124,4 +126,15 @@ There are six most difficult envs where  the desired goals and block initial pos
 
 ## How to use
 
-All parameters is 
+All parameters are in [arguements.py](./arguments.py), please check the parameters when running algorithms.
+
+
+
+
+## Acknowledgement:
+We borrowed some code from the following repositories:
+- [Pytorch DDPG-HER Implementation](https://github.com/TianhongDai/hindsight-experience-replay)
+
+- [CURROT](https://github.com/psclklnk/currot/tree/main)
+
+- [Exploration-baseline](https://github.com/yuanmingqi/rl-exploration-baselines)
