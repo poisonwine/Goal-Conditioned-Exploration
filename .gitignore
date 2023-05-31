@@ -1,0 +1,16 @@
+**/__pycache__
+.idea/
+**/.DS_STORE
+**/figures
+**/goal_csv
+**/HGG_result
+**/*.egg-info
+**/saved_models
+**/.vscode
+**/wandb
+**/runs
+**/*.png
+**/*.log
+**/*.jpg
+**/fetch_test.py
+**/
