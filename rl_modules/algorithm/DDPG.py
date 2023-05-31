@@ -31,22 +31,7 @@ class ddpg_agent(object):
         sync_networks(self.critic_network)
         sync_networks(self.V_critic)
         # load the weights into the target networks
-        if args.use_pretrain_policy:
-            model_path = '/data1/ydy/RL/HER_v3/saved_models/FetchPush-v1/HER/seed-6/models/model_epoch_30.pt'
-            data = torch.load(model_path)
-            q_critic_params = data['critic']
-            actor_params = data['actor']
-            v_critic_params = data['v_critic']
-            self.pretrain_actor = actor(env_params)
-            self.pretrain_actor.load_state_dict(actor_params)
-
-            self.pretrain_qcritic = critic(env_params)
-            self.pretrain_qcritic.load_state_dict(q_critic_params)
-            
-            self.pretrain_vcritic = V_critic(env_params=env_params)
-
-            self.pretrain_vcritic.load_state_dict(v_critic_params)
-
+       
              
         self.actor_target_network.load_state_dict(self.actor_network.state_dict())
         self.critic_target_network.load_state_dict(self.critic_network.state_dict())
