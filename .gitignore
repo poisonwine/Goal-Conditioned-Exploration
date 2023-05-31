@@ -10,7 +10,7 @@
 **/.vscode
 **/wandb
 **/runs
-**/*.png
+
 **/*.log
 **/*.jpg
 **/fetch_test.py
