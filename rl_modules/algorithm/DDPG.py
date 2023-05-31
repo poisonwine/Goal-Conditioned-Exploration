@@ -90,6 +90,9 @@ class ddpg_agent(object):
             elif self.args.reward_method=='mine':
                 extra_r = self.reward_teacher.compute_reward(transitions['obs'], transitions['obs_next'])
                 r_tensor= torch.tensor(extra_r + transitions['r'], dtype=torch.float32)
+            elif self.args.reward_method =='icm':
+                extra_r = self.reward_teacher.compute_reward(transitions['obs'], transitions['action'], transitions['obs_next'])
+                r_tensor= torch.tensor(extra_r + transitions['r'], dtype=torch.float32)
         else:
             r_tensor = torch.tensor(transitions['r'], dtype=torch.float32)
 

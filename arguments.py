@@ -51,7 +51,7 @@ def get_args():
     parser.add_argument('--critic_type', type=str, default='MRN', choices=['monolithic', 'BVN', 'MRN'], help='critic type')
     parser.add_argument('--n_epochs', type=int, default=200, help='the number of epochs to train the agent')
     parser.add_argument('--n_cycles', type=int, default=50, help='the times to collect samples per epoch')
-    parser.add_argument('--num_rollouts_per_mpi', type=int, default=5, help='the rollouts per mpi')
+    parser.add_argument('--num_rollouts_per_mpi', type=int, default=3, help='the rollouts per mpi')
     parser.add_argument('--n_batches', type=int, default=40, help='the times to update the network')
     parser.add_argument('--save_interval', type=int, default=5, help='the interval that save the models')
     parser.add_argument('--use_pretrain_policy', type=bool, default=False)
@@ -174,11 +174,11 @@ def get_args():
     parser.add_argument('--sample_stratage',type=str,default='MEGA',choices=['MEGA','Diverse','MinQ','MinV', 'RIG','VAD','LP','MEGA_VAD', 'MEGA_LP','MEGA_MinV'])
     parser.add_argument('--state_discover',action='store_true', help='state discover')
     parser.add_argument('--state_discover_method', type=str, default='prior',choices=['prior','icm','mine'])
-    parser.add_argument('--age_lambda', type=float, default=0.5)
+    parser.add_argument('--age_lambda', type=float, default=0.2)
     parser.add_argument('--explore_alpha', type=float, default=0.5)
     parser.add_argument('--curriculum_select',action='store_true', help='curriculum select')
     parser.add_argument('--density_h', type=float, default=0.1)
-    
+
     # config for icm teacher
     parser.add_argument('--icm_iteration',type=int, default=40, help='the step when update icm module')
     parser.add_argument('--icm_beta',type=float, default=0.2, help='the step when update discriminator')
