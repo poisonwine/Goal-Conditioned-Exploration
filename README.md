@@ -26,4 +26,4 @@ Many algorithms set intrinsic goals to help robot to exploration in hard-explora
     - [RIG](https://arxiv.org/abs/1807.04742) (rl_modules/teachers/AGE)
     - [MinQ](https://arxiv.org/abs/1907.08225) (rl_modules/teachers/AGE)
 
-The AGE(Active Goal Exploration) module contains different goal sampling stratagies. See [ageteacher.py]()
+The AGE(Active Goal Exploration) module contains different goal sampling stratagies, please see [ageteacher.py]() for detailed information.
