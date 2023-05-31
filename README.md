@@ -42,8 +42,9 @@ We implement three common reinforment learning  algorithms in robot learning, in
 
 ### Envs
 Our repo contains plenty of  goal-conditioned robot envs, please see [myenvs](https://github.com/poisonwine/Goal-Conditioned-Exploration/tree/master/myenvs). 
-The most difficult envs are 
-![hard_envs](https://img.shields.io/badge/license-MIT-blue)
+
+There are six most difficult envs where  the desired goals and block initial position have a huge gap, as the following figure shows.
+![hard_envs](./fetchenv_hard.png)
    
 - [FetchPushObstacle](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/myenvs/fetch/push_new.py)
 - [FetchPushMiddleGap](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/myenvs/fetch/push_wall_obstacle.py)
