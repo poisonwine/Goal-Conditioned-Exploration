@@ -1,7 +1,7 @@
 **/__pycache__
 .idea/
 **/.DS_STORE
-**/figures
+**/utils/saved_models
 **/results
 **/goal_csv
 **/*.egg-info
