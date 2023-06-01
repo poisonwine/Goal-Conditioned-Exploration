@@ -144,6 +144,30 @@ There are six most difficult envs where  the desired goals and block initial pos
 ![hard_envs](./fetchenv_hard.png)
 
 
+## Results
+The training results will be saved as the following structure
+```
+—— saved_models
+—————— alg
+———————— seed-5
+———————————— progress_5.csv
+———————————— models
+———————— seed-6
+———————————— progress_6.csv
+———————————— models
+```
+
+When you want to plot results, see [utils/plot.py](./utils/plot.py). The defalut results structure is as follows:
+```
+—— results
+—————— alg1
+———————— progress_5.csv
+———————— progress_6.csv
+—————— alg2
+———————— progress_5.csv
+———————— progress_6.csv
+```
+
 ## Some ToDos
 
 - Model-based Planning
