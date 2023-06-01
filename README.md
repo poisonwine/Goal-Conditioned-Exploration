@@ -1,6 +1,6 @@
 # Goal-Conditioned Exploration Framework
 
-This repo is established for goal-conditioned exploration in multi-goal robotic environments.
+This repo is established for goal-conditioned exploration  in multi-goal robotic environments. We aim to provide a modular and readable framework.
 
 The fundamental algorithm is [Hindsight Experience Replay](https://arxiv.org/abs/1707.01495) (HER) , and we have extended the HER algorithm from the following aspects:
 - Exploration Goal Selection: how to set exploration goal at the beginning of an episode
@@ -9,9 +9,18 @@ The fundamental algorithm is [Hindsight Experience Replay](https://arxiv.org/abs
 
 - Intrinsic Reward: use priors to accelerate learning
 
+Everyone is welcome to suggest and contribute.
+
 
 
 ## Requirements
+This repo only support Ubuntu system, before running the code, install the OpenMPI
+```
+sudo apt-get update && sudo apt-get install libopenmpi-dev 
+```
+Other packages
+- python==3.6
+
 - gym==0.15.4
 
 - mpi4py==3.1.3
@@ -189,3 +198,5 @@ We borrowed some code from the following repositories:
 - [CURROT](https://github.com/psclklnk/currot/tree/main)
 
 - [Exploration-baseline](https://github.com/yuanmingqi/rl-exploration-baselines)
+
+- [Modular-HER](https://github.com/YangRui2015/Modular_HER)
