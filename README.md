@@ -34,20 +34,35 @@ Then you can run [train.py](./train.py) for training.
 Many algorithms set intrinsic goals to help robot to exploration in hard-exploraion environments. This module contains the goal selection algorithms.
 - Supported Algorithms
 
-    ✅ [HGG](https://arxiv.org/abs/1906.04279)  (rl_modules/teachers/HGG) 
+    ✅ [HGG](https://arxiv.org/abs/1906.04279) 
+     ([rl_modules/teachers/HGG](./rl_modules/teachers/HGG/)) 
 
-    ✅ [VDS](https://arxiv.org/abs/2006.09641) (rl_modules/teachers/VDS)
+    ✅ [VDS](https://arxiv.org/abs/2006.09641) 
+    ([rl_modules/teachers/VDS](./rl_modules/teachers/VDS/))
 
-    ✅ [MEGA](https://arxiv.org/abs/2007.02832)(rl_modules/teahcers/AGE)
-
-    ✅ [RIG](https://arxiv.org/abs/1807.04742) (rl_modules/teachers/AGE)
-
-    ✅ [MinQ](https://arxiv.org/abs/1907.08225) (rl_modules/teachers/AGE)
-
-    ✅ [AIM](https://arxiv.org/abs/2105.13345) (rl_modules/teachers/AIM)
+    ✅ [AIM](https://arxiv.org/abs/2105.13345)
+     ([rl_modules/teachers/AIM](./rl_modules/teachers/AIM/))
 
 The AGE(Active Goal Exploration) module contains different goal sampling stratagies, please see [ageteacher.py](https://github.com/poisonwine/Goal-Conditioned-Exploration/blob/master/rl_modules/teachers/AGE/ageteacher.py) for detailed information.
 
+- Supported goal sampling stratagy
+
+    ✅ [MEGA](https://arxiv.org/abs/2007.02832)
+    ([rl_modules/teahcers/AGE](./rl_modules/teachers/AGE/))
+
+    ✅ [RIG](https://arxiv.org/abs/1807.04742) 
+    ([rl_modules/teachers/AGE](./rl_modules/teachers/AGE/))
+
+    ✅ [MinQ](https://arxiv.org/abs/1907.08225) 
+    ([rl_modules/teachers/AGE](./rl_modules/teachers/AGE/))
+
+    ✅ [LP](https://openreview.net/forum?id=Vk9RH9aL1Yv)
+    ([rl_modules/teachers/AGE](./rl_modules/teachers/AGE/))
+
+    ✅ [Diverse](https://arxiv.org/abs/1903.03698)
+     ([rl_modules/teachers/AGE](./rl_modules/teachers/AGE/))
+
+    ✅ [DEST](./rl_modules/teachers/AGE/) (Ours)
 
 Some examples of running commands:
 ```python
@@ -60,8 +75,8 @@ mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG -
 # AIM 
 mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG --n_epochs 100 --seed 5   --alg AIM --goal_teacher --teacher_method AIM  
 
-#MEGA/MinQ/RIG
-mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG --n_epochs 100 --seed 5   --alg MEGA/MinQ/RIG --goal_teacher --teacher_method AGE  --sample_stratage MEGA/MinQ/RIG
+#MEGA/MinQ/RIG/Diverse
+mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG --n_epochs 100 --seed 5   --alg MEGA/MinQ/RIG/Diverse --goal_teacher --teacher_method AGE  --sample_stratage MEGA/MinQ/RIG/Diverse
 
 # DEST
 mpirun -np 6 python -u train.py --env_name FetchPushMiddleGap-v1  --agent DDPG --n_epochs 100 --seed 5  --explore_alpha 0.5 --alg DEST --goal_teacher --teacher_method AGE --sample_stratage MEGA_MinV --goal_shift   --state_discover_method mine --state_discover --reward_teacher --reward_method mine --age_lambda 0.2  
