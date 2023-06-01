@@ -4,9 +4,8 @@
 **/figures
 **/results
 **/goal_csv
-**/HGG_result
 **/*.egg-info
-**/saved_models
+**/saved_models/*
 **/.vscode
 **/wandb
 **/runs
